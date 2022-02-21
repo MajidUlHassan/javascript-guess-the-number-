@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+  font-family: raleway;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  font-size: 1.5rem;
+  transition: .3s all ease-out;
+}
+
+.btn,
+.guess-area,
+.score-area,
+.btn-check,
+.hidden,
+input {
+  color: hsl(190, 75%, 20%);
+}
+
+.container {
+  background-color: hsl(140, 0%, 50%);
+  /* background-color: hsl(140, 30%, 50%);
+  background-color: #808080;
+  background-color: #59a673; */
+  width: 100vw;
+  height: 100vh;
+  padding: 1rem;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+/* Styling the upper area */
+
+.upper-area {
+  display: grid;
+  grid-template-columns: 140px 1fr 140px;
+  grid-template-areas: 
+  "try-again  .       ."
+  ".       guess      ."
+  ".      question    ."
+  ;
+}
+
+.try-area {
+  grid-area: try-again;
+  font-size: 1rem;
+}
+
+.guess-area {
+  grid-area: guess;
+  text-align: center;
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+.hidden {
+  grid-area: question;
+  text-align: center;
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+
+hr {
+  border-top: 1px solid hsl(190, 75%, 20%);
+}
+
+/* Now Styling the lower area */
+
+.lower-area {
+  display: grid;
+  grid-template-columns: 50px 1fr 1fr 50px;
+  grid-template-areas: 
+  ".   input-area  score-area   ."
+  ;
+  align-items: center;
+  padding: 1rem;
+}
+
+.input-area {
+  grid-area: input-area;
+}
+
+.score-area {
+  grid-area: score-area;
+  text-align: center;
+}
+
+.input-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 5px;
+}
+
+.btn {
+  color: white;
+  background-color: hsl(190, 75%, 20%);
+  width: fit-content;
+  padding: 7px 15px;
+  border-radius: .3rem;
+  cursor: pointer;
+  font-size: .7rem;
+}
+
+.btn:hover {
+  background-color: hsl(190, 75%, 30%);
+}
+
+input,
+#message,
+.score,
+#score,
+#highscore,
+.highscore {
+  font-size: 1rem;
+}
+
+input {
+  width: 4rem;
+  padding: .5rem 0 .5rem .7rem;
+  border: 1px solid hsl(190, 75%, 20%);
+  border-radius: .3em;
+}
+
+input:focus {
+  box-shadow: 0 0 10px 0 hsl(190, 75%, 20%);
+}
+
+
+.video {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+}
